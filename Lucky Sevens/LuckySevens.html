@@ -1,0 +1,119 @@
+<!DOCTYPE = html/>
+<html lang=en">
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Lucky Sevens!</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script type="text/javascript">
+		function rolldice() {
+			return Math.floor(Math.random() * 6) + 1;
+		}	
+		function playgame() {
+			var startingbet=document.getElementById("startingbet").value;
+			if (startingbet <= 0 || "" || isNaN(startingbet)) {
+				alert("Please enter a valid starting bet.")
+			}
+			else{
+			var currentbet=Number(startingbet);
+			var rolls=0;
+			var highestroll=0;
+			var highest=startingbet;
+			while (currentbet > 0) {
+				var die1=rolldice();
+				var die2=rolldice();
+				if (die1+die2==7){
+				/* If this condition is met on the first roll, 4 is concatenated onto the starting bet, so we need to make it not be a string. */
+				/* To solve the problem, coerce the current bet to a number when it is initialized */
+					currentbet=currentbet+4;
+					}
+				else {
+					currentbet=currentbet-1;
+					}
+				rolls++
+				if (currentbet>highest){
+					highest=currentbet;
+					highestroll=rolls;
+				}
+			}
+			
+			/*The following portion concerns the display of the results upon game completion*/
+			/*document.getElementById("startingbetresult").innerText=document.getElementById("startingbet").value;*/
+			document.getElementById("startingbetresult").innerText="$"+startingbet;
+			document.getElementById("totalrollsresult").innerText=rolls;
+			document.getElementById("highestamountresult").innerText="$"+highest;
+			document.getElementById("rollcountathighestresult").innerText=highestroll;
+			document.getElementById("results").style.display="block";
+			document.getElementById("resultshead").style.display="block";
+			document.getElementById("resultshr").style.display="block";
+			document.getElementById("button").innerText="Click to play again!";
+			}
+		}	
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+	<div class="col">
+		<h1 class="text-center">Lucky Sevens!</h1>
+	</div>
+</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="text-center">
+				Starting Bet: <input type="text" id="startingbet" placeholder="$##.##" />
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="text-center">
+				<button id="button" onclick="playgame();">Play!</button>
+			</p>
+		</div>
+	</div>
+	
+	<div id="resultshr" class="row" style="display:none;>
+		<div class="col">
+			<hr />
+		</div>
+	</div>
+	
+	<div class="row">
+	<div class="col">
+		<h1 id="resultshead" class="text-center" style="display:none;">Results!</h1>
+	</div>
+</div>
+	
+	<div class="row">
+	<div class="table-fluid col-lg-12">
+	<table id="results" class="table table-striped table-bordered" style="display:none;">
+		<tbody class="col-lg-12 center">
+			<tr>
+				<td class="col-lg-9">Starting Bet:</td>
+				<td class="col-lg-3"><span id="startingbetresult"></span></td>
+			</tr>
+			<tr>
+				<td>Total Rolls:</td>
+				<td><span id="totalrollsresult"></span></td>
+			</tr>
+			<tr>
+				<td>Highest Amount:</td>
+				<td><span id="highestamountresult"></span></td>
+			</tr>
+			<tr>
+				<td>Roll Count at Highest Amount:</td>
+				<td><span id="rollcountathighestresult"></span></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

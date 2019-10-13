@@ -1,0 +1,70 @@
+nav .nav-item {
+	background-color: #FFFFFF;
+    color: #fef9ff; 
+}
+
+h1 {
+	font-family: 'Bree Serif', serif;
+}
+
+header {
+	background-color:  #FED480;
+}
+
+footer {
+	background-color:  #FED480;
+}
+
+.firsthr {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.lasthr {
+	margin-bottom: 0px;
+	margin-top:0px;
+}
+
+.left-col {
+	text-align: right
+}
+
+/*Link handling*/
+
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+
+/* Carousel stuff here.  From prior testing. */
+
+.body {
+  background-color: #333333;
+}
+
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+}
+
+#text-carousel {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+

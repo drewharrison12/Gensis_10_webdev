@@ -1,0 +1,246 @@
+<!DOCTYPE = html />
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Contact Us!</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="restaurant.css">
+	<style>
+	.form-check-input {
+	margin-right: 10px
+	}
+	
+	.row {
+	padding-top: 5px;
+	padding-bottom:  5px;
+	}
+	
+	.mandatory {
+	font-weight: bold;
+	}
+	</style>
+	<!-- The submit function ensures that data has been entered for the required fields of Name, email, phone, and reason.
+		I didn't know which fields to make "mandatory" so I chose these ones.  The assignment didn't specify.  You can see that their fields are bolded.
+		The inclusion of "reason" is pointless since it can never be empty.-->
+	<script type="text/javascript">
+		function checkit() {
+		var value1=document.getElementById("Name").value;
+		var value2=document.getElementById("Email").value;
+		var value3=document.getElementById("Phone").value;
+
+		
+		if (value1=="" || value2=="" || value3=="") {
+			alert("Please fill out all of the required (bolded) fields.")
+		
+		}
+		else {
+			alert("Thank you for contacting us. Your information has been submitted.")
+		}
+		}
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+	<header>
+	<div class="row">
+		<div class="col">
+		</div>
+		<div class="col">
+			<h1 class="text-center">Drew's Kitchen</h1>
+		</div>
+		<div class="col">
+		</div>
+	</div>
+	</header>
+	
+	<hr class="firsthr"/>
+	
+	<div class="row">
+		<nav>
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+				<a class="nav-link" href="Homepage.html">&#8962; Home</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="Menu.html">Menu</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="Contact.html">Contact Us</a>
+				</li>
+		</nav>
+	</div>
+	
+	<hr class="firsthr"/>
+	
+<form>
+	<div class="row">
+		<div class="col">
+			<p class="left-col mandatory">
+			Name:
+			</p>
+		</div>
+		<div class="col">
+			<input id="Name" type="text" class="form-control" />
+		</div>
+		<div class="col">
+		</div>
+	
+	
+	
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<p class="left-col mandatory">
+			Email:
+			</p>
+		</div>
+		<div class="col">
+			<input id="Email" type="email" class="form-control" />
+		</div>
+		<div class="col">
+		</div>
+	
+	
+	
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<p class="left-col mandatory">
+			Phone:
+			</p>
+		</div>
+		<div class="col">
+			<input id="Phone" type="text" class="form-control" />
+		</div>
+		<div class="col">
+		</div>
+	
+	
+	
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<p class="left-col mandatory">
+			Reason for Inquiry:
+			</p>
+		</div>
+		<div class="col">
+			<select id="Reason" class="form-control">
+				<option>Catering</option>
+				<option>Private Party</option>
+				<option>Feedback</option>
+				<option>Other</option>
+			</select>
+		</div>
+		<div class="col">
+		</div>
+	
+	
+	
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<p class="left-col">
+			Additional Information:
+			</p>
+		</div>
+		<div class="col">
+		<textarea class="form-control" rows="4"></textarea>
+		</div>
+		<div class="col">
+		</div>
+	
+	
+	
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<p class="left-col">
+			Have you been to the restaurant?
+			</p>
+		</div>
+		<div class="col">
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" value="option1"></input><label class="form-check-label" style="margin-right: 10px">No</label>
+				<input class="form-check-input" type="radio" value="option2"></input><label class="form-check-label" style="margin-right: 10px">Yes</label>
+			</div>
+		</div>
+		<div class="col">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<p class="left-col">
+			Best day to contact you:
+			</p>
+		</div>
+		<div class="col">
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox"></input><label class="form-check-label" style="margin-right: 10px">M</label>
+				<input class="form-check-input" type="checkbox"></input><label class="form-check-label" style="margin-right: 10px">T</label>
+				<input class="form-check-input" type="checkbox"></input><label class="form-check-label" style="margin-right: 10px">W</label>
+				<input class="form-check-input" type="checkbox"></input><label class="form-check-label" style="margin-right: 10px">Th</label>
+				<input class="form-check-input" type="checkbox"></input><label class="form-check-label" style="margin-right: 10px">F</label>
+			</div>
+		</div>
+		<div class="col">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+		</div>
+		<div class="col">
+			<div style="text-align: center">
+				<button type="submit" class="btn btn-primary" onclick="checkit();">Submit</button>
+			</div>
+		</div>
+		<div class="col">
+		</div>
+	</div>
+	
+</form>
+	
+	
+	<hr class="lasthr" />
+	<footer>
+		<div class="row">
+			<div class="col-lg-2">
+			</div>
+			<div class="col-lg-8">
+				<p class="text-center">
+				Real Street, Raleigh, North Carolina, 27513
+				</p>
+			</div>		
+			<div class="col-lg-2">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-2">
+			</div>
+			<div class="col-lg-8">
+				<p class="text-center">
+				Phone Number: 919-123-4567
+				</p>
+			</div>		
+			<div class="col-lg-2">
+			</div>
+		</div>
+	</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5st
+</body>
+</html>
